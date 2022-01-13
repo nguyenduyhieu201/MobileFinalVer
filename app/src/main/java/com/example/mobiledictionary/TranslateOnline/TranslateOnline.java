@@ -42,8 +42,8 @@ public class TranslateOnline extends AppCompatActivity {
     private MaterialButton translateBtn;
     private TextView translateTV;
     private Bitmap bitmap;
-    String[] fromLanguages = {"Form", "English", "VietNamese"};
-    String[] toLanguages = {"Form", "English", "VietNamese"};
+    String[] fromLanguages = {"Language", "English", "VietNamese"};
+    String[] toLanguages = {"Language", "English", "VietNamese"};
 
     private  static final int REQUEST_PERMISSION_CODE = 1, REQUEST_CAMERA_CODE = 100;;
     String fromLanguadeCode, toLanguageCode;

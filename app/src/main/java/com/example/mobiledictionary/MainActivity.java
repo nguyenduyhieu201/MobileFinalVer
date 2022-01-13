@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     long current = Calendar.getInstance().getTimeInMillis();
     public int hourPos;
     public int minPos;
+    public String speedSpeak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
         else {
             editor.putBoolean("anhAnhSelected",false);
             editor.apply();
+        }
+
+        speedSpeak = sharedPref.getString("speedSelect","");
+        if (speedSpeak.equals("fast")) {
+            editor.putBoolean("selectFast", true);
+        }
+        else {
+            editor.putBoolean("selectFast", false);
         }
 
         hour24 = Integer.valueOf(sharedPref.getString("hourSet","00"));
@@ -296,6 +305,11 @@ public class MainActivity extends AppCompatActivity {
             // TODO: handle exception
             System.out.println("Loi Anh Viet");
         }
+    }
+    public void DropTable () {
+        highlightWordHelper.DeleteTable("NoiDung");
+        highlightWordHelper.DeleteTable("VietEngDemo");
+
     }
 }
 

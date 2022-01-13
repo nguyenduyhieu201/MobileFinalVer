@@ -32,6 +32,9 @@ public class Setting extends AppCompatActivity  {
     Spinner spinnerMin;
     public int hourSetting;
     public int minSetting;
+    RadioButton fast, slow;
+    private boolean fastSelect = false;
+
 
     public Setting () {
 
@@ -64,6 +67,8 @@ public class Setting extends AppCompatActivity  {
         anhMy = findViewById(R.id.en_US);
         spinner24Hour = findViewById(R.id.hour24);
         spinnerMin = findViewById(R.id.minute);
+        fast = findViewById(R.id.fast);
+        slow = findViewById(R.id.slow);
 
         if (sharedPref.getBoolean("anhAnhSelected",false) == true) {
             anhAnh.setChecked(true);
@@ -112,6 +117,19 @@ public class Setting extends AppCompatActivity  {
                 Log.d("không cái gì đc chọn", "");
             }
         });
+
+        //cài đặt tốc độ nói
+        fastSelect = sharedPref.getBoolean("selectFast", true);
+        if (!fastSelect) {
+            fast.setChecked(false);
+            slow.setChecked(true);
+        }
+        else {
+            fast.setChecked(true);
+            slow.setChecked(false);
+        }
+        fast.setOnCheckedChangeListener(speedRate);
+        slow.setOnCheckedChangeListener(speedRate);
     }
 
     CompoundButton.OnCheckedChangeListener listenerRadio
@@ -127,6 +145,22 @@ public class Setting extends AppCompatActivity  {
             else if (anhMy.isChecked()) {
                 accentSelection = "EngUS";
                 editor.putString("accent", accentSelection);
+                editor.apply();
+            }
+        }
+    };
+
+    CompoundButton.OnCheckedChangeListener speedRate
+            = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            if (fast.isChecked()) {
+                editor.putString("speedSelect", "fast");
+                editor.apply();
+            }
+
+            else if (slow.isChecked()) {
+                editor.putString("speedSelect", "slow");
                 editor.apply();
             }
         }

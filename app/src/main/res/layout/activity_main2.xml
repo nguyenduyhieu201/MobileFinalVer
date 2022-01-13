@@ -19,7 +19,7 @@
 
         <EditText
             android:id="@+id/edittext_main_search"
-            android:layout_width="320dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -28,12 +28,13 @@
 
         <Button
             android:id="@+id/bSearch"
-            android:layout_width="23dp"
+            android:layout_width="33dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#00BCD4"
             android:backgroundTintMode="screen"
-            android:drawableEnd="@drawable/icon_search" />
+            android:drawableRight="@drawable/icon_search"
+            />
 
     </LinearLayout>
 
@@ -67,6 +68,15 @@
         android:text="Từ của bạn" />
 
     <Button
+        android:id="@+id/training"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#6CD5E3"
+        android:text="Luyện tập" />
+
+    <Button
         android:id="@+id/bCaiDat"
         android:layout_width="match_parent"
         android:layout_height="72dp"
@@ -83,14 +93,8 @@
         android:backgroundTint="#6CD5E3"
         android:text="Thoát chương trình" />
 
-    <Button
-        android:id="@+id/training"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:backgroundTint="#6CD5E3"
-        android:text="Luyện tập" />
+
+
 
 </LinearLayout>
 

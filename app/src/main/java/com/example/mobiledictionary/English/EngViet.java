@@ -55,6 +55,7 @@ public class EngViet extends AppCompatActivity {
     private Speak speak = new Speak();
     private boolean ready;
     public String languageSelected;
+    public String speedSpeak;
 
     public EngViet () {
 
@@ -81,7 +82,7 @@ public class EngViet extends AppCompatActivity {
         SharedPreferences sharedPref = this.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         languageSelected = sharedPref.getString("accent","");
-        System.out.print(languageSelected);
+        speedSpeak = sharedPref.getString("speedSelect", "");
 
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -89,13 +90,17 @@ public class EngViet extends AppCompatActivity {
                 speak.setTextToSpeechLanguage(textToSpeech,"VietNam");
             }
         });
+        if (speedSpeak.equals("fast")) {
+            textToSpeech.setSpeechRate((float) 1.5);
+            editor.putBoolean("selectFast", true);
+            editor.apply();
+        }
+        else {
+            textToSpeech.setSpeechRate((float) 1.0);
+            editor.putBoolean("selectFast", false);
+            editor.apply();
+        }
 
-//      englishWordHelper.CreateData("NoiDung");
-//      englishWordHelper.InsertData("NoiDung","hi","xin chao");
-//      englishWordHelper.InsertData("NoiDung","hello","xin chao 2");
-//      englishWordHelper. InsertData("NoiDung","cat","meo");
-//      englishWordHelper.InsertData("NoiDung","dog","cho");
-//      englishWordHelper.InsertData("NoiDung", "item","trang bi");
         //tìm kiếm từ vựng
 
         Intent intent = getIntent();
@@ -137,6 +142,7 @@ public class EngViet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("accent select", languageSelected);
+                Log.d("Speed", speedSpeak);
                 if (languageSelected.equals("English")) {
                     speak.setTextToSpeechLanguage(textToSpeech, "English");
                 } else {

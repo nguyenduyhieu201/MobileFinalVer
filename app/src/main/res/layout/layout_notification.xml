@@ -16,20 +16,20 @@
         android:layout_marginRight="20dp"
         android:background="#FFFFFF"
         android:fontFamily="sans-serif"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textColor="@color/Red"
         android:inputType="none"
         android:padding="7dp" />
 
     <TextView
         android:id="@+id/meaning"
-        android:layout_width="369dp"
+        android:layout_width="match_parent"
         android:layout_height="518dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="20dp"
         android:background="#FFFFFF"
-        android:textSize="30dp"
-        android:padding="10dp"
-        android:textAlignment="center" />
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+         />
 </LinearLayout>
