@@ -158,6 +158,7 @@ public class VietEng extends AppCompatActivity {
         button_add_note.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                button_add_note.setAlpha((float) 0.4);
                 String note = edittext_note.getText().toString().trim();
                 vietWordHelper.NoteWord(note, idWord, "VietEngDemo");
             }

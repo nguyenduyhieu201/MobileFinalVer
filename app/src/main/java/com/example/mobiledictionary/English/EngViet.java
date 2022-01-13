@@ -197,8 +197,9 @@ public class EngViet extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String note = edittext_note.getText().toString().trim();
+                button_add_note.setAlpha((float) 0.4);
                 englishWordHelper.NoteWord(note, idWord, "NoiDung");
-                dialog.dismiss();
+//                dialog.dismiss();
                 Toast.makeText(EngViet.this, "Thêm ghi chú thành công.", Toast.LENGTH_SHORT);
             }
         });

@@ -15,6 +15,7 @@
             android:text="Luyện tập từ mới"
             android:layout_margin="20dp"
             android:textSize = "40dp"
+            android:fontFamily="sans-serif"
             android:gravity = "center"
             />
         <LinearLayout

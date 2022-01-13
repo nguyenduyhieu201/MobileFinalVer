@@ -7,10 +7,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <TextView
+        android:text="Từ của bạn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#C8FFF4"
+        android:fontFamily="sans-serif"
+        android:textSize="20dp"
+        android:textColor="@color/Red"
+        android:inputType="none"
+        android:gravity = "center"
+        android:padding="7dp" />
+    <TextView
         android:id="@+id/edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
