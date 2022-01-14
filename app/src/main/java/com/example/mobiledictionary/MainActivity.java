@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
         }
 
+        highlightWordHelper.InsertData("NoiDung","hi","xin chao");
+        highlightWordHelper.InsertData("NoiDung","hello","xin chao 2");
+        highlightWordHelper.InsertData("NoiDung","dog","chó");
+        highlightWordHelper.InsertData("NoiDung","cat","mèo");
         speedSpeak = sharedPref.getString("speedSelect","");
         if (speedSpeak.equals("fast")) {
             editor.putBoolean("selectFast", true);
