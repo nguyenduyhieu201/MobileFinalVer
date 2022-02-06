@@ -47,7 +47,7 @@ public class EngViet extends AppCompatActivity {
     private CompoundButton mButtonHighlight;
     private Button mButtonOpen_Dialog_Note;
     private WordHelper englishWordHelper = new WordHelper(this,
-            "TuDienSqlite", null, 1);
+            null, 1);
     private String key1;
     private TextView meaning;
     private WordController englishWordController = new WordController();

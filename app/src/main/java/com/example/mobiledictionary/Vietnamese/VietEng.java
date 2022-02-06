@@ -31,7 +31,7 @@ public class VietEng extends AppCompatActivity {
     private Button mButtonVietSpeak;
     private TextToSpeech textVietToSpeech;
     private WordHelper vietWordHelper = new WordHelper(this,
-            "TuDienSqlite", null, 1);
+            null, 1);
     private int vietWordId = 0;
     private WordController vietWordController = new WordController();
     private Speak speak = new Speak();

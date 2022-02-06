@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Training extends AppCompatActivity {
     private WordHelper wordHelper = new WordHelper(this,
-            "TuDienSqlite", null, 1);
+            null, 1);
     private WordController wordController = new WordController();
     private List<EnglishWord> mListHighlight;
     private EnglishWord randomWord;

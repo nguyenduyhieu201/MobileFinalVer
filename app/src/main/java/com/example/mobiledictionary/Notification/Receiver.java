@@ -29,7 +29,7 @@ public class Receiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         highlightWordHelper = new WordHelper(context,
-                "TuDienSqlite", null, 1);
+                null, 1);
         mListHighlight =
         highlightWordHelper.getHighlightList("NoiDung","VietEngDemo");
         randomHighlightWord = wordController.getRandomWord(mListHighlight);

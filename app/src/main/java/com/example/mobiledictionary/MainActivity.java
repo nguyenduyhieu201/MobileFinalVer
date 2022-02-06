@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public WordController wordController = new WordController();
     public Calendar rightNow = Calendar.getInstance();
     private WordHelper highlightWordHelper = new WordHelper(this,
-            "TuDienSqlite", null, 1);
+            null, 1);
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
@@ -92,8 +92,9 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("minSetting", minPos);
         editor.apply();
 
-        highlightWordHelper.CreateData("NoiDung");
-        highlightWordHelper.CreateData("VietEngDemo");
+        highlightWordHelper.createDataBase();
+//        highlightWordHelper.CreateData("NoiDung");
+//        highlightWordHelper.CreateData("VietEngDemo");
 
         String pathdb = getDatabasePath("tudiensqlite.db").getPath();
         Log.d("path la", pathdb);
@@ -115,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.bCaiDat:
                         openSetting();
                         break;
-                    case R.id.addDB:
-                        addDatabase();
-                        break;
+//                    case R.id.addDB:
+//                        addDatabase();
+//                        break;
                     case R.id.finish:
                         FinishApp();
                         break;
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.finish).setOnClickListener(handler);
         findViewById(R.id.training).setOnClickListener(handler);
         findViewById(R.id.bDichVB).setOnClickListener(handler);
-        findViewById(R.id.addDB).setOnClickListener(handler);
+//        findViewById(R.id.addDB).setOnClickListener(handler);
 
 
         //noi dung va tieu de notification

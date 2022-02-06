@@ -33,7 +33,7 @@ public class MyWords extends AppCompatActivity implements ItemTouchHelperListene
     private List<EnglishWord> mListHighlight;
     private LinearLayout rootView;
     private WordHelper englishWordHelper = new WordHelper(this,
-            "TuDienSqlite", null, 1);
+            null, 1);
     private WordController wordController = new WordController();
     private Calendar rightNow = Calendar.getInstance();
     @Override
