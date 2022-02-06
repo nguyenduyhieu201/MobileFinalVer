@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("anhAnhSelected",false);
             editor.apply();
         }
-        
+
         speedSpeak = sharedPref.getString("speedSelect","");
         if (speedSpeak.equals("fast")) {
             editor.putBoolean("selectFast", true);
@@ -115,9 +115,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.bCaiDat:
                         openSetting();
                         break;
-//                    case R.id.addDB:
-//                        addDatabase();
-//                        break;
+                    case R.id.addDB:
+                        addDatabase();
+                        break;
                     case R.id.finish:
                         FinishApp();
                         break;
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.finish).setOnClickListener(handler);
         findViewById(R.id.training).setOnClickListener(handler);
         findViewById(R.id.bDichVB).setOnClickListener(handler);
-//        findViewById(R.id.addDB).setOnClickListener(handler);
+        findViewById(R.id.addDB).setOnClickListener(handler);
 
 
         //noi dung va tieu de notification
